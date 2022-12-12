@@ -12,4 +12,21 @@ for i in range(-n, n+1):
 print(numbers)
 a, b, c, = (input()).split()
 print(a, b, c)
+i = 0 
+mult = 1
+
+if i == a:
+    print(numbers[i])
+    mult *= numbers[i]
+else:
+    i +=1
+if b == i:
+    mult *= numbers[i]
+else:
+    i +=1
+if c == i:
+   mult *= numbers[i]
+else:
+    i +=1
+print(mult)
 
