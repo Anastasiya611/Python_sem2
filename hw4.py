@@ -6,27 +6,10 @@
 # Вывод: 0
 
 n = int(input("Введите N:"))
-numbers = []
-for i in range(-n, n+1):
-    numbers.append(i)
-print(numbers)
-a, b, c, = (input()).split()
-print(a, b, c)
-i = 0 
-mult = 1
-
-if i == a:
-    print(numbers[i])
-    mult *= numbers[i]
-else:
-    i +=1
-if b == i:
-    mult *= numbers[i]
-else:
-    i +=1
-if c == i:
-   mult *= numbers[i]
-else:
-    i +=1
-print(mult)
-
+input_list = [x for x in range (-n, n + 1)]
+print(f'список из N элементов: {input_list}')
+indexes = [int(x) for x in input('Введите Индексы, через пробел: ').split()]
+result = 1
+for i in indexes:
+    result*=input_list[i]
+print(f'произведение = {result}')
